@@ -10,18 +10,18 @@ def main():
     with open("fish.txt", 'r') as textFile:
       lineNumber = 0
 
-    for line in textFile:
-      lineNumber += 1
-      lineWords = line.split()
+      for line in textFile:
+        lineNumber += 1
+        lineWords = line.split()
 
-      for word in lineWords:
-        word = word.lower().strip(".,!?")
+        for word in lineWords:
+          word = word.lower().strip(".,!?")
 
-        if word in words:
-          if lineNumber not in words[word]:
-            words[word].append(lineNumber)
-        else:
-          words[word] = [lineNumber]
+          if word in words:
+            if lineNumber not in words[word]:
+              words[word].append(lineNumber)
+          else:
+            words[word] = [lineNumber]
 
     for word in sorted(words):
       print(word, ":", words[word])
