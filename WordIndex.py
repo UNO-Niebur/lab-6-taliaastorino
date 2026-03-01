@@ -26,7 +26,7 @@ def main():
           
     textFile.close()
 
-    for word in sortedIwords):
+    for word in sorted(words):
       print(word, ":", words[word])
 
   except FileNotFoundError:
