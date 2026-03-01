@@ -15,7 +15,7 @@ def main():
     die2 = random.randint(1,6)
     
   #find the sum total of the two dice
-    total = die1 = die2
+    total = die1 + die2
 
     rolls[total - 1] += 1
   #print statictics for dice rolls
@@ -30,8 +30,8 @@ def main():
     totalPercent += percent
     print(i, "\t", count, "\t", format(percent, ".2f"), "%")
 
-print("---------------------------")
-print("Total Percentage:", format(totalPercent, ".2f"), "%")
+  print("---------------------------")
+  print("Total Percentage:", format(totalPercent, ".2f"), "%")
 
 if __name__ == '__main__':
   main()
